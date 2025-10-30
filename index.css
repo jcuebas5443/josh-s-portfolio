@@ -43,6 +43,9 @@ h1, h2, h3 {
     color: aliceblue;
     padding: 10px;
 }
+h1:hover,h2:hover,h3:hover{
+  color: #be5103;
+}
 ul{
     display: flex;
     list-style-type: none;
@@ -118,10 +121,10 @@ ul li a:hover {
 
 @keyframes pulse {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(.75);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.0);
   }
 }
 
@@ -150,8 +153,13 @@ ul li a:hover {
   border-radius: 10px;
   text-align: center;
   background-color: black;
-  flex: 0 0 calc(33.33% - 40px); 
-  
+  flex: 0 0 calc(33.33% - 40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillscards:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .skillscards:hover {
@@ -187,6 +195,7 @@ ul li a:hover {
 
 label{
     display: block;
+    text-align: left;
 }
 input[type=text]{
     width: 100%;
